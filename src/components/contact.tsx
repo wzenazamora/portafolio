@@ -3,6 +3,7 @@ import { site } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
 export function Contact() {
+  console.log('test');
   return (
     <section id="contacto" className="scroll-mt-20 py-24 md:py-32">
       <div className="relative mx-auto max-w-6xl overflow-hidden px-6 md:px-8">
