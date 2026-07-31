@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { navLinks, site } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
@@ -32,7 +33,7 @@ export function SiteHeader() {
           {site.name}
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
+        <nav className="hidden items-center gap-5 lg:flex lg:gap-7" aria-label="Principal">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -45,9 +46,12 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a href="#contacto" className={buttonVariants({ size: "sm" })}>
-          Hablar
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a href="#contacto" className={buttonVariants({ size: "sm" })}>
+            Hablar
+          </a>
+        </div>
       </div>
     </header>
   );
